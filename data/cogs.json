@@ -16,6 +16,11 @@
       "id": "report",
       "repo": "https://github.com/Ray-Hsueh/BallsDex-Report-Pack",
       "branch": "main"
-    }
+    },
+    {
+      "id": "leaderboard",
+      "repo": "https://github.com/cewlgruyere/Ballsdex-leaderboard-pack-v3",
+      "branch": "main"
+    },
   ]
 }
