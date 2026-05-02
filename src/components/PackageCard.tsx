@@ -3,8 +3,8 @@ import type { Cog } from '../types';
 
 function buildInstallSnippet(cog: Cog): string {
   const name = cog.name ?? cog.id;
-  const version = cog.version ? `@v${cog.version}` : '';
-  const location = `git+${cog.repo}.git${version}`;
+  const ref = cog.version ? `@v${cog.version}` : cog.branch ? `@${cog.branch}` : '';
+  const location = `git+${cog.repo}.git${ref}`;
   return `[[ballsdex.packages]]\nlocation = "${location}"\npath = "${name}"\nenabled = true`;
 }
 
