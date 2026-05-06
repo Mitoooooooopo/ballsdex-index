@@ -18,11 +18,6 @@
       "branch": "main"
     },
     {
-      "id": "v2-completion",
-      "repo": "https://github.com/cewlgruyere/V2-Completion",
-      "branch": "main"
-    },
-    {
       "id": "report",
       "repo": "https://github.com/Ray-Hsueh/BallsDex-Report-Pack",
       "branch": "main"
@@ -40,6 +35,11 @@
     {
       "id": "collect",
       "repo": "https://github.com/CrashTestAlex/collectibles-ballsdex",
+      "branch": "main"
+    },
+    {
+      "id": "v2-completion",
+      "repo": "https://github.com/cewlgruyere/V2-Completion",
       "branch": "main"
     }
   ]
