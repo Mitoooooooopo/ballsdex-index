@@ -1,7 +1,7 @@
 [
   {
     "id": "collector",
-    "status": "unapproved",
+    "status": "approved",
     "repo": "https://github.com/flaree/ballsdex-collector",
     "branch": "master",
     "name": "collector",
@@ -18,6 +18,29 @@
       "Homepage": "https://github.com/flaree/ballsdex-collector",
       "Documentation": "https://ballsdex-collector.readthedocs.io",
       "Changelogs": "https://ballsdex-collector.readthedocs.io/en/latest/changelog.html",
+      "Funding": "https://www.patreon.com/flaree"
+    },
+    "dependencies": []
+  },
+  {
+    "id": "frames",
+    "status": "unapproved",
+    "repo": "https://github.com/flaree/ballsdex-frames",
+    "branch": "master",
+    "name": "frames",
+    "version": "0.0.1",
+    "description": "Frames package for BallsDex \u2014 date-based ball art overrides",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "flare",
+        "email": "flare@ballsdex.com"
+      }
+    ],
+    "urls": {
+      "Homepage": "https://github.com/flaree/ballsdex-frames",
+      "Documentation": "https://ballsdex-frames.readthedocs.io/en/latest/",
+      "Changelogs": "https://ballsdex-frames.readthedocs.io/en/latest/changelog.html",
       "Funding": "https://www.patreon.com/flaree"
     },
     "dependencies": []
