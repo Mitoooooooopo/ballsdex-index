@@ -46,6 +46,11 @@
       "id": "v2-completion",
       "repo": "https://github.com/cewlgruyere/V2-Completion",
       "branch": "main"
+    },
+    {
+      "id": "rarity",
+      "repo": "https://github.com/hiboman/BallsDex-Rarity-Pack",
+      "branch": "master"
     }
   ]
 }
