@@ -114,7 +114,7 @@
   {
     "id": "leaderboard",
     "status": "unapproved",
-    "repo": "https://github.com/cewlgruyere/Ballsdex-leaderboard-pack-v3",
+    "repo": "https://github.com/cewlgruyere/Leaderboard-BD",
     "branch": "main",
     "name": "leaderboard",
     "version": "1.0.1",
@@ -196,6 +196,28 @@
       "Repository": "https://github.com/cewlgruyere/V2-Completion",
       "Documentation": "https://github.com/cewlgruyere/V2-Completion#readme",
       "Issues": "https://github.com/cewlgruyere/V2-Completion/issues"
+    },
+    "dependencies": []
+  },
+  {
+    "id": "rarity",
+    "status": "unapproved",
+    "repo": "https://github.com/hiboman/BallsDex-Rarity-Pack",
+    "branch": "master",
+    "name": "rarity",
+    "version": "0.0.1",
+    "description": "Rarity package for BallsDex",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "hiboman",
+        "email": "hiboman@proton.me"
+      }
+    ],
+    "urls": {
+      "Repository": "https://github.com/hiboman/BallsDex-Rarity-Pack",
+      "Documentation": "https://github.com/hiboman/BallsDex-Rarity-Pack#readme",
+      "Issues": "https://github.com/hiboman/BallsDex-Rarity-Pack/issues"
     },
     "dependencies": []
   }
