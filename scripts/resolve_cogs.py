@@ -26,6 +26,21 @@ COGS_FILE = REPO_ROOT / "data" / "cogs.json"
 RESOLVED_FILE = REPO_ROOT / "public" / "data" / "resolved.json"
 
 
+def get_release_ref(repo_url: str, version: str) -> str | None:
+    """Return the tag name if a release tag exists for the given version, else None."""
+    if not version:
+        return None
+    for tag in (f"v{version}", version):
+        result = subprocess.run(
+            ["git", "ls-remote", "--tags", repo_url, tag],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return tag
+    return None
+
+
 def clone_and_read(repo_url: str, branch: str, tmpdir: str) -> dict | None:
     dest = os.path.join(tmpdir, "repo")
     result = subprocess.run(
@@ -76,11 +91,19 @@ def main() -> None:
             if metadata is None:
                 metadata = {}
 
+            version = metadata.get("version", "")
+            release_ref = get_release_ref(repo_url, version) if version else None
+            if release_ref:
+                install_url = f"git+{repo_url}@{release_ref}"
+            else:
+                install_url = f"git+{repo_url}.git#{branch}"
+
             resolved.append({
                 "id": cog_id,
                 "status": status,
                 "repo": repo_url,
                 "branch": branch,
+                "install_url": install_url,
                 **metadata,
             })
 

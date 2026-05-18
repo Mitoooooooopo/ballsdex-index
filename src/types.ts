@@ -10,6 +10,7 @@ export interface Cog {
   status: CogStatus;
   repo: string;
   branch: string;
+  install_url?: string;
   name?: string;
   version?: string;
   description?: string;
