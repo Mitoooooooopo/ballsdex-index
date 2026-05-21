@@ -251,5 +251,28 @@
       "homepage": "https://github.com/dormieriancitizen/bd-fontchanger"
     },
     "dependencies": []
+  },
+  {
+    "id": "BossPackageBD",
+    "status": "unapproved",
+    "repo": "https://github.com/MoOfficial0000/BossPackageBD",
+    "branch": "BossPackageBD-V3",
+    "install_url": "git+https://github.com/MoOfficial0000/BossPackageBD.git#BossPackageBD-V3",
+    "name": "boss",
+    "version": "1.0.0",
+    "description": "Boss package for BallsDex",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Mo Official",
+        "email": "moofficial420@gmail.com"
+      }
+    ],
+    "urls": {
+      "Repository": "https://github.com/MoOfficial0000/BossPackageBD",
+      "Documentation": "https://github.com/MoOfficial0000/BossPackageBD#readme",
+      "Issues": "https://github.com/MoOfficial0000/BossPackageBD/issues"
+    },
+    "dependencies": []
   }
 ]
