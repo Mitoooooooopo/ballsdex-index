@@ -56,6 +56,11 @@
       "id": "bd-fontchanger",
       "repo": "https://github.com/dormieriancitizen/bd-fontchanger",
       "branch": "main"
+    },
+    {
+      "id": "BossPackageBD",
+      "repo": "https://github.com/MoOfficial0000/BossPackageBD",
+      "branch": "BossPackageBD-V3"
     }
   ]
 }
