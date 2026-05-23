@@ -168,8 +168,8 @@
     "branch": "main",
     "install_url": "git+https://github.com/CrashTestAlex/collectibles-ballsdex.git#main",
     "name": "collect",
-    "version": "1.2.3",
-    "description": "Collectible items for your BallsDex clone! Must have currency",
+    "version": "1.3.0",
+    "description": "Collectible items for your BallsDex clone! Must have currency enabled.",
     "license": "MIT",
     "authors": [
       {
