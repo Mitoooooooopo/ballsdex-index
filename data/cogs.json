@@ -66,6 +66,11 @@
       "id": "hiboman-leaderboard",
       "repo": "https://github.com/MapsDex-Team/BallsDex-Leaderboard-Pack",
       "branch": "master"
+    },
+    {
+      "id": "re-collection",
+      "repo": "https://github.com/cewlgruyere/ReCol",
+      "branch": "master"
     }
   ]
 }
