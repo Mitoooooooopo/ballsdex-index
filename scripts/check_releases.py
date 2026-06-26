@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 """
-Check that every cog in data/cogs.json has a tagged release matching its
+Check that cogs in data/cogs.json have a tagged release matching their
 pyproject.toml version. Used by the PR validation workflow to warn
 contributors when a cog's declared version has no corresponding release.
+
+Usage: check_releases.py <output_md_path> [ids_file]
+
+If ids_file is given, only cogs whose id appears in it (one id per line) are
+checked — used to scope the check to the cog(s) a PR actually touches instead
+of every cog already in cogs.json. Without it, all cogs are checked.
 
 Prints one line per cog missing a release and exits non-zero if any are found,
 so the workflow can decide whether to post a PR comment.
@@ -23,10 +29,18 @@ def main() -> None:
     with open(COGS_FILE) as f:
         cogs_data = json.load(f)
 
+    ids_file = sys.argv[2] if len(sys.argv) > 2 else None
+    only_ids = None
+    if ids_file:
+        with open(ids_file) as f:
+            only_ids = {line.strip() for line in f if line.strip()}
+
     missing = []
 
     for status in ("approved", "unapproved"):
         for entry in cogs_data.get(status, []):
+            if only_ids is not None and entry["id"] not in only_ids:
+                continue
             repo_url = entry["repo"]
             branch = entry.get("branch", "main")
             cog_id = entry["id"]

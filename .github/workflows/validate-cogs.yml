@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Validate JSON
         run: python3 -c "import json, sys; json.load(open('data/cogs.json')); print('cogs.json is valid JSON')"
@@ -28,10 +30,13 @@ jobs:
       - name: Install dependencies
         run: pip install tomli
 
+      - name: Determine changed cogs
+        run: python scripts/changed_cog_ids.py "${{ github.event.pull_request.base.sha }}" > changed_cogs.txt
+
       - name: Check for missing releases
         id: check_releases
         run: |
-          python scripts/check_releases.py missing-releases.md || true
+          python scripts/check_releases.py missing-releases.md changed_cogs.txt || true
           if [ -s missing-releases.md ]; then
             echo "has_missing=true" > has_missing.txt
           else
