@@ -204,6 +204,25 @@
     "dependencies": []
   },
   {
+    "id": "re-collection",
+    "status": "unapproved",
+    "repo": "https://github.com/cewlgruyere/ReCol",
+    "branch": "master",
+    "install_url": "git+https://github.com/cewlgruyere/ReCol@1.0.0",
+    "name": "ReCollection",
+    "version": "1.0.0",
+    "description": "This BallsDex extension adds a new option to /balls collection, allowing you to pick a user. Along with that, it also comes with new UI for the command which can be toggled in the admin panel!",
+    "license": "Apache-2.0",
+    "authors": [
+      {
+        "name": "gruyere",
+        "email": "gruyere@remicrodex.com"
+      }
+    ],
+    "urls": {},
+    "dependencies": []
+  },
+  {
     "id": "hiboman-antifarm",
     "status": "unapproved",
     "repo": "https://github.com/MapsDex-Team/BallsDex-AntiFarm-Pack",
