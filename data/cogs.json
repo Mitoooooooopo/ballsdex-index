@@ -101,6 +101,11 @@
       "id": "packs",
       "repo": "https://github.com/seiftheman/ballsdex-packs",
       "branch": "main"
+    },
+    {
+     "id": "cbattle",
+     "repo": "https://github.com/Mitoooooooopo/CBattle-bd-",
+     "branch": "main"
     }
   ]
 }
